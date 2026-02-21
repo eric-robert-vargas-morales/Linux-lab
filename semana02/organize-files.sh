@@ -18,3 +18,11 @@ mv *.md organized/documents 2>/dev/null || true
 mv *.doc organized/documents/ 2>/dev/null || true
 
 echo "   Documentos organizados"
+
+# Organizar imagenes
+echo "[3/4] Organizando imagenes..."
+mv *.jpg organized/images/ 2>/dev/null || true
+mv *.png organized/images/ 2>/dev/null || true
+mv *.gif organized/images/ 2>/dev/null || true
+
+echo "    Imagenes organizadas"
