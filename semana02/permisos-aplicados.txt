@@ -1,0 +1,81 @@
+organized/:
+total 24
+drwxr-xr-x 2 eric eric 4096 feb 21 10:49 config
+drwxr-xr-x 2 eric eric 4096 feb 21 10:49 documents
+drwxr-xr-x 2 eric eric 4096 feb 21 10:49 images
+drwxr-xr-x 2 eric eric 4096 feb 21 10:49 logs
+drwxr-xr-x 2 eric eric 4096 feb 21 10:49 scripts
+drwxr-xr-x 2 eric eric 4096 feb 21 10:49 temp
+
+organized/config:
+total 32
+-rw-r--r-- 1 eric eric 25 feb 21 10:24 config_1.conf
+-rw-r--r-- 1 eric eric 25 feb 21 10:24 config_2.conf
+-rw-r--r-- 1 eric eric 25 feb 21 10:24 config_3.conf
+-rw-r--r-- 1 eric eric 25 feb 21 10:24 config_4.conf
+-rw-r--r-- 1 eric eric 15 feb 21 10:24 settings_1.json
+-rw-r--r-- 1 eric eric 15 feb 21 10:24 settings_2.json
+-rw-r--r-- 1 eric eric 15 feb 21 10:24 settings_3.json
+-rw-r--r-- 1 eric eric 15 feb 21 10:24 settings_4.json
+
+organized/documents:
+total 64
+-rw-r--r-- 1 eric eric    0 feb 21 10:13 analisis-permisos.md
+-rw-r--r-- 1 eric eric   22 feb 21 10:24 documento_1.txt
+-rw-r--r-- 1 eric eric   22 feb 21 10:24 documento_2.txt
+-rw-r--r-- 1 eric eric   22 feb 21 10:24 documento_3.txt
+-rw-r--r-- 1 eric eric   22 feb 21 10:24 documento_4.txt
+-rw-r--r-- 1 eric eric   22 feb 21 10:24 documento_5.txt
+-rw-r--r-- 1 eric eric 3039 feb 21 10:24 estado-inicial.txt
+-rw-r--r-- 1 eric eric   10 feb 21 10:24 notas_1.md
+-rw-r--r-- 1 eric eric   10 feb 21 10:24 notas_2.md
+-rw-r--r-- 1 eric eric   10 feb 21 10:24 notas_3.md
+-rw-r--r-- 1 eric eric   10 feb 21 10:24 notas_4.md
+-rw-r--r-- 1 eric eric   10 feb 21 10:24 notas_5.md
+-rw-r--r-- 1 eric eric    0 feb 21 10:12 README.md
+-rw-r--r-- 1 eric eric   10 feb 21 10:24 reporte_1.doc
+-rw-r--r-- 1 eric eric   10 feb 21 10:24 reporte_2.doc
+-rw-r--r-- 1 eric eric   10 feb 21 10:24 reporte_3.doc
+-rw-r--r-- 1 eric eric   10 feb 21 10:24 reporte_4.doc
+-rw-r--r-- 1 eric eric   10 feb 21 10:24 reporte_5.doc
+
+organized/images:
+total 40
+-rw-r--r-- 1 eric eric 14 feb 21 10:24 foto_1.jpg
+-rw-r--r-- 1 eric eric 14 feb 21 10:24 foto_2.jpg
+-rw-r--r-- 1 eric eric 14 feb 21 10:24 foto_3.jpg
+-rw-r--r-- 1 eric eric 14 feb 21 10:24 foto_4.jpg
+-rw-r--r-- 1 eric eric 14 feb 21 10:24 foto_5.jpg
+-rw-r--r-- 1 eric eric 14 feb 21 10:24 screenshot_1.png
+-rw-r--r-- 1 eric eric 14 feb 21 10:24 screenshot_2.png
+-rw-r--r-- 1 eric eric 14 feb 21 10:24 screenshot_3.png
+-rw-r--r-- 1 eric eric 14 feb 21 10:24 screenshot_4.png
+-rw-r--r-- 1 eric eric 14 feb 21 10:24 screenshot_5.png
+
+organized/logs:
+total 28
+-rw-r--r-- 1 eric eric 91 feb 21 10:24 app_1.log
+-rw-r--r-- 1 eric eric 91 feb 21 10:24 app_2.log
+-rw-r--r-- 1 eric eric 91 feb 21 10:24 app_3.log
+-rw-r--r-- 1 eric eric 55 feb 21 10:24 sistema_1.log
+-rw-r--r-- 1 eric eric 55 feb 21 10:24 sistema_2.log
+-rw-r--r-- 1 eric eric 55 feb 21 10:24 sistema_3.log
+-rw-r--r-- 1 eric eric 55 feb 21 10:24 sistema_4.log
+
+organized/scripts:
+total 48
+-rwxr-xr-x 1 eric eric 1266 feb 21 10:22 generate-messy-files.sh
+-rwxr-xr-x 1 eric eric 1914 feb 21 10:48 organize-files.sh
+-rwxr-xr-x 1 eric eric   39 feb 21 10:24 script_1.sh
+-rwxr-xr-x 1 eric eric   39 feb 21 10:24 script_2.sh
+-rwxr-xr-x 1 eric eric   39 feb 21 10:24 script_3.sh
+-rwxr-xr-x 1 eric eric   39 feb 21 10:24 script_4.sh
+-rwxr-xr-x 1 eric eric   39 feb 21 10:24 script_5.sh
+-rwxr-xr-x 1 eric eric   52 feb 21 10:24 utilidad_1.py
+-rwxr-xr-x 1 eric eric   52 feb 21 10:24 utilidad_2.py
+-rwxr-xr-x 1 eric eric   52 feb 21 10:24 utilidad_3.py
+-rwxr-xr-x 1 eric eric   52 feb 21 10:24 utilidad_4.py
+-rwxr-xr-x 1 eric eric   52 feb 21 10:24 utilidad_5.py
+
+organized/temp:
+total 0
