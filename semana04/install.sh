@@ -5,8 +5,8 @@
 set -e 	# Detener si hay error
 
 # Directorio donde esta este script
-DOTFILES_DIR ="$(cd "$(dirname "$0")/dotfiles" && pwd)"
-BACKUP_DIR ="$HOME/.dotfiles-backup-$(date +%Y%m%d)"
+DOTFILES_DIR="$(cd "$(dirname "$0")/dotfiles" && pwd)"
+BACKUP_DIR="$HOME/.dotfiles-backup-$(date +%Y%m%d)"
 
 echo "==================================================="
 echo " 		Instalador de Dotfiles - Semana 4"

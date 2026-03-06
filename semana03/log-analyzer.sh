@@ -90,7 +90,7 @@ cat > "$REPORT" << EOF
 # Reporte de Analisis de Logs
 
 **Archivo analizado:** $LOGFILE
-**Fecha del analisis:** $(date '+%Y-%m-%d%H:%M:%S')
+**Fecha del analisis:** $(date '+%Y-%m-%d %H:%M:%S')
 **Total de entradas:** $(wc -l < "$LOGFILE")
 
 ---
@@ -99,7 +99,7 @@ cat > "$REPORT" << EOF
 
 | Solicitudes   | Direccion IP |
 |---------------|--------------|
-$(cut -d '|' -f2 "$LOGFILE" | tr -d ' ' | sort | uniq -c | \
+$(cut -d'|' -f2 "$LOGFILE" | tr -d ' ' | sort | uniq -c | \
 	sort -rn | head -10 | \
 	awk '{printf "| %d | %s |\n", $1, $2}')
 
@@ -115,7 +115,7 @@ done)
 ## 3. Eventos por Hora
 |  Hora  |  Eventos  |
 |--------|-----------|
-$(cut -d '|' -f1 "$LOGFILE" | awk '{print $2}' | cut -d ':' -f1 | \
+$(cut -d'|' -f1 "$LOGFILE" | awk '{print $2}' | cut -d':' -f1 | \
 	sort | uniq -c | awk '{printf "| %s:00 | %d |\n", $2, $1}')
 
 ## 4. Top 5 Mensajes de Error
@@ -123,7 +123,7 @@ $(cut -d '|' -f1 "$LOGFILE" | awk '{print $2}' | cut -d ':' -f1 | \
 |  Frecuencia  |  Mensaje  |
 |--------------|-----------|
 $(grep -E "\| (ERROR|FATAL) \|" "$LOGFILE" | cut -d'|' -f4 | \
-	tr -d ' ' | sort | uniq -c | sort - rn | head -5 | \
+	tr -d ' ' | sort | uniq -c | sort -rn | head -5 | \
 	awk '{count=$1; $1=""; gsub(/^ /,"",$0); printf "| %d | %s |\n", count, $0}')
 
 ## 5. Resumen
