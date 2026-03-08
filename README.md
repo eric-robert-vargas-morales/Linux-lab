@@ -16,7 +16,7 @@ Cada semana incluye un capstone practico versionado con Git.
 |   01   | Fundamentos + Git              | completado |
 |   02   | Manipulacion de Archivos       | completado |
 |   03   | Procesamiento de Texto         | completado |
-|   04   | Editores y Configuracion       |            |
+|   04   | Editores y Configuracion       | completado |
 |   05   | Bash Scripting - Fundamentos   |            |
 |   06   | Bash Scripting - Condicionales |            |
 |   07   | Bash Scripting - Loops         |            |
@@ -115,6 +115,14 @@ Cada semana incluye un capstone practico versionado con Git.
 		report.md
 		sample.log
 	semana04
+		dotfiles/
+			bash_aliases
+			bashrc
+			vimrc
+		install.sh
+		README.md
+		uninstall.sh
+	semana05
 		(por completar)
 	'''
 '''
