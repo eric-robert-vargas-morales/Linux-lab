@@ -33,7 +33,7 @@ uso(){
 }
 
 # === Procesar argumentos ===
-MODO="$(1:-all)"
+MODO="${1:-all}"
 
 case "$MODO" in
 	--all|"all")	MODO="all"	;;
