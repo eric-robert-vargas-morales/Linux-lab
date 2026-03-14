@@ -109,7 +109,7 @@ seccion_procesos() {
 	mis_proc=$(ps -u "$USER" --no-headers 2>/dev/null | wc -l)
 
 	printf "  %-20s %s\n" "total en sistema:" "$total_proc"
-	printf "  %-20s %s\n" "de &USER:"	  "$mis_proc"
+	printf "  %-20s %s\n" "de $USER:"	  "$mis_proc"
 	echo ""
 	echo "Top 5 por consumo de CPU:"
 	printf "  %-8s %-5s %-5s %s\n" "PID" "%CPU" "%MEM" "COMANDO"
