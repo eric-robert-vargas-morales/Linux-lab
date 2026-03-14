@@ -69,6 +69,6 @@ printf "	REPORTE DEL SISTEMA	-	sysinfo.sh v%s\n" "$VERSION"
 echo "$SEPARADOR"
 echo ""
 # === Ejecutar segun el modo ===
-if[ "$MODO" = "all" ]; then
+if [ "$MODO" = "all" ]; then
 	seccion_general
 fi
