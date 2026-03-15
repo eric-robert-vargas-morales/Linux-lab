@@ -17,7 +17,7 @@ Cada semana incluye un capstone practico versionado con Git.
 |   02   | Manipulacion de Archivos       | completado |
 |   03   | Procesamiento de Texto         | completado |
 |   04   | Editores y Configuracion       | completado |
-|   05   | Bash Scripting - Fundamentos   |            |
+|   05   | Bash Scripting - Fundamentos   | completado |
 |   06   | Bash Scripting - Condicionales |            |
 |   07   | Bash Scripting - Loops         |            |
 |   08   | Bash Scripting - Avanzado      |            |
@@ -31,7 +31,7 @@ Cada semana incluye un capstone practico versionado con Git.
 
 ## Estructura del Repositorio
 
-'''
+´´´
 .Linux-lab
 	 README.md
 	 semana01
@@ -123,9 +123,13 @@ Cada semana incluye un capstone practico versionado con Git.
 		README.md
 		uninstall.sh
 	semana05
+		commands-used.md
+		README.md
+		sysinfo.sh
+	semana06
 		(por completar)
-	'''
-'''
+	´´´
+´´´
 ## Objetivos del Curso
 - Aprender linea de comandos Linux
 - Desarrollar scripts en Bash
