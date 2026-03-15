@@ -7,7 +7,7 @@ Muestra informacion de CPU, RAM, disco y procesos activos
 
 ## Uso
 
-'''bash
+´´´bash
 ./sysinfo.sh		# Reporte completo
 ./sysinfo.sh --cpu	# Solo CPU 
 ./sysinfo.sh --mem	# Solo memoria
@@ -15,16 +15,16 @@ Muestra informacion de CPU, RAM, disco y procesos activos
 ./sysinfo.sh --proc	# Solo procesos
 ./sysinfo.sh --version 	# Version del script
 ./sysinfo.sh --help	# Ayuda
-'''
+´´´
 
 ## Estructura
 
-'''
+´´´
 semana05/
 	README.md
 	sysinfo.sh
 	comands-used.md
-'''
+´´´
 
 ## Conceptos aprendidos
 
@@ -40,10 +40,10 @@ semana05/
 
 ## Ejecucion 
 
-'''bash 
+´´´bash 
 cd ~/Linux-lab/semana05
 chmod +x sysinfo.sh
 ./sysinfo.sh
-'''
+´´´
 
 
