@@ -3,8 +3,8 @@
 # Linux Lab - Repositorio de Aprendizaje
 
 ## Estudiante
-** Nombre :** Eric Robert Vargas Morales
-** Semestre :** I/2026
+**Nombre:** Eric Robert Vargas Morales
+**Semestre:** I/2026
 
 ## Descripcion
 Repositorio de aprendizaje Linux en 15 semanas.
@@ -18,7 +18,7 @@ Cada semana incluye un capstone practico versionado con Git.
 |   03   | Procesamiento de Texto         | completado |
 |   04   | Editores y Configuracion       | completado |
 |   05   | Bash Scripting - Fundamentos   | completado |
-|   06   | Bash Scripting - Condicionales |            |
+|   06   | Bash Scripting - Condicionales | completado |
 |   07   | Bash Scripting - Loops         |            |
 |   08   | Bash Scripting - Avanzado      |            |
 |   09   | Gestion de Procesos            |            |
@@ -31,7 +31,7 @@ Cada semana incluye un capstone practico versionado con Git.
 
 ## Estructura del Repositorio
 
-´´´
+```
 .Linux-lab
 	 README.md
 	 semana01
@@ -127,9 +127,15 @@ Cada semana incluye un capstone practico versionado con Git.
 		README.md
 		sysinfo.sh
 	semana06
+		logs/
+			backup-check-20260322.log
+		backup-check.sh
+		commands-used.md
+		README.md
+	semana07
 		(por completar)
 	´´´
-´´´
+```
 ## Objetivos del Curso
 - Aprender linea de comandos Linux
 - Desarrollar scripts en Bash
@@ -137,11 +143,11 @@ Cada semana incluye un capstone practico versionado con Git.
 - Construir portfolio en GitHub
 
 ## Tecnologias
-- ** OS :** Linux Mint v.22.1
-- ** Shell :** Bash 5.2.21
-- ** VCS :** Git 2.43.0
-- ** Editor :** nano
-- ** Hosting :** GitHub
+- **OS:** Linux Mint v.22.1
+- **Shell:** Bash 5.2.21
+- **VCS:** Git 2.43.0
+- **Editor:** nano
+- **Hosting:** GitHub
 ## Contacto
 - Email : eric69904@gmail.com
 - GitHub : https://github.com/eric-robert-vargas-morales
