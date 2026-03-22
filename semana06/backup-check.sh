@@ -106,19 +106,18 @@ verificar_antiguedad() {
 	log "INFO" "Verificando antiguedad del backup mas reciente..."
 	# Contar archivos modificados en las ultimas MAX_HORAS
 	# find -mtime -1 equivale a "modificado hace menos e 24 horas"
-	local dias_limite=$(( MAX_HORAS_SIN_BACKUP / 24 ))
+	local dias_limite=$(( MAX_HORAS_SIN_BACKUPS / 24 ))
 	[ "$dias_limite" -eq 0 ] && dias_limite=1
 
 	local recientes
-	recientes=$(find "DIR_BACKUP" -maxdepth 1 -type f -name "*.tar.gz" -mtime -"$dias_limite" | wc -l)
+	recientes=$(find "$DIR_BACKUP" -maxdepth 1 -type f -name "*.tar.gz" -mtime -"$dias_limite" | wc -l)
 
 	if [ "$recientes" -eq 0 ]; then
-		log "WARNING" \ 
-			"No hay backups de las ultimas $(MAX_HORAS_SIN_BACKUP}h"
+		log "WARNING" "No hay backups de las ultimas ${MAX_HORAS_SIN_BACKUPS}h"
 		return 0
 	fi
 
-	log "OK" "$recientes backup(s) recientes (ultimas ${MAX_HORAS_SIN_BACKUP}h)"
+	log "OK" "$recientes backup(s) recientes (ultimas ${MAX_HORAS_SIN_BACKUPS}h)"
 	return 0
 }
 
@@ -154,6 +153,7 @@ case "${1:-}" in
 esac
 
 # === Inicio de reporte ===
+mkdir -p "$DIR_LOGS"
 log "INFO" "=== backup-check.sh v$VERSION - Inicio ==="
 log "INFO" "Directorio objetivo $DIR_BACKUP"
 
@@ -165,3 +165,21 @@ fi
 verificar_archivos
 verificar_antiguedad
 verificar_tamanio
+
+# === Estado final ===
+log "INFO" "=== Verificacion completa ==="
+
+case "$estado_global" in
+	OK)
+		log "OK"	"RESULTADO: todos los checks pasaron correctamente"
+		exit 0
+		;;
+	WARNING)
+		log "WARNING"	"RESULTADO: verificacion completada advertencias"
+		exit 0
+		;;
+	ERROR)
+		log "ERROR"	"RESULTADO: se detectaron errores que requiere atencion"
+		exit 1
+		;;
+esac
