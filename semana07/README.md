@@ -6,10 +6,10 @@ Comprueba disco, RAM y CPU, registra en log
 y emite alertas por umbrales configurables
 
 ## Uso
-./monitor.sh 				# Monitoreo continuo
-./monitor.sh --max 10 			# 10 comprobaciones
-./monitor.sh --intervalo 5 		# Cada 5 segundos
-./monitor.sh --umbral-disco 70 		# Alerta al 70%
+`./monitor.sh` 				# Monitoreo continuo
+`./monitor.sh --max 10` 		# 10 comprobaciones
+`./monitor.sh --intervalo 5` 		# Cada 5 segundos
+`./monitor.sh --umbral-disco 70` 	# Alerta al 70%
 
 Detener con Ctrl+C (muestra resumen antes de salir) 
 
