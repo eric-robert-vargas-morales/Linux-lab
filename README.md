@@ -19,7 +19,7 @@ Cada semana incluye un capstone practico versionado con Git.
 |   04   | Editores y Configuracion       | completado |
 |   05   | Bash Scripting - Fundamentos   | completado |
 |   06   | Bash Scripting - Condicionales | completado |
-|   07   | Bash Scripting - Loops         |            |
+|   07   | Bash Scripting - Loops         | completado |
 |   08   | Bash Scripting - Avanzado      |            |
 |   09   | Gestion de Procesos            |            |
 |   10   | Systemd y Cron                 |            |
@@ -133,6 +133,10 @@ Cada semana incluye un capstone practico versionado con Git.
 		commands-used.md
 		README.md
 	semana07
+		commands-used.md
+		monitor.sh
+		README.md
+	semana08
 		(por completar)
 	´´´
 ```
