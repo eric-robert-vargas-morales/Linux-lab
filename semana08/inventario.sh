@@ -1,11 +1,10 @@
-cat >> inventario.sh << 'EOF'
 #!/bin/bash
 set -euo pipefail
 
 REPO="${1:-$HOME/Linux-lab}"
 
 if [[ ! -d "$REPO" ]]; then
-	echo "Error: directorio '$REPO' no existe" <&2
+	echo "Error: directorio '$REPO' no existe" >&2
 	exit 1
 fi
 
@@ -13,7 +12,7 @@ echo "Analizando repositorio: $REPO"
 
 # --- 1: Cargar lista de arcchivos ---
 mapfile -t archivos < <(find "$REPO" -type f | sort)
-echo "Total de archivos encontrados: $(#arvchivos[@]}"
+echo "Total de archivos encontrados: ${#archivos[@]}"
 
 # --- 2: Conteo por extension --
 declare -A conteo
@@ -49,8 +48,8 @@ declare -a matriz_sem
 
 for (( i=0; i<${#semanas[@]}; i++)); do
 	dir="${semanas[$i]}"
-	scripts=$(find "$dir" - name "*.sh" | wc -1)
-	docs=$(find "$dir" -name "*.md" | wc -1)
+	scripts=$(find "$dir" -name "*.sh" | wc -l)
+	docs=$(find "$dir" -name "*.md" | wc -l)
 	kb=$(du -sk "$dir" 2>/dev/null | awk '{print $1}')
 	matriz_sem[$(( i*COLS+0 ))]=$scripts
 	matriz_sem[$(( i*COLS+1 ))]=$docs
@@ -74,7 +73,7 @@ printf "%-12s %-4s %-4s %-10s %-8s\n" "SEMANA" "SH" "MD" "SIZE_KB" "README"
 printf "%s\n" "---------------------------------------------------------------"
 for (( i=0; i<${#semanas[@]}; i++ )); do
 	nombre=$(basename "${semanas[$i]}")
-	printf "%-12s %-4s %-10s %-8s\n" \
+	printf "%-12s %-4s %-4s %-10s %-8s\n" \
 	"$nombre" \
 	"${matriz_sem[$(( i*COLS+0 ))]}" \
 	"${matriz_sem[$(( i*COLS+1 ))]}" \
@@ -87,7 +86,7 @@ REPORTE="${REPO}/semana08/inventario-report.md"
 {
 	echo "# Inventario del Repositorio Linux-lab"
 	echo ""
-	echo "Generado: $(date '%Y-%m-%d %H:%M:%S')"
+	echo "Generado: $(date '+%Y-%m-%d %H:%M:%S')"
 	echo ""
 	echo "## Total de archivos: ${#archivos[@]}"
 	echo ""
@@ -95,7 +94,7 @@ REPORTE="${REPO}/semana08/inventario-report.md"
 	echo ""
 	echo "| Extension | Archivos | Tamano KB |"
 	echo "|-----------|----------|-----------|"
-	for ext in $(printf '%s\n' "${conteo[@]}" | sort); do
+	for ext in $(printf '%s\n' "${!conteo[@]}" | sort); do
 		kb=$(( ${tamano_ext["$ext"]:-0} / 1024 ))
 		echo "| $ext | ${conteo[$ext]} | $kb |"
 	done
@@ -115,4 +114,3 @@ REPORTE="${REPO}/semana08/inventario-report.md"
 
 echo ""
 echo "Reporte guardado en: $REPORTE"
-EOF
