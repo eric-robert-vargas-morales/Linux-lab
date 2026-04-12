@@ -10,4 +10,8 @@ if [[ ! -d "$REPO" ]]; then
 fi
 
 echo "Analizando repositorio: $REPO"
+
+# --- 1: Cargar lista de arcchivos ---
+mapfile -t archivos < <(find "$REPO" -type f | sort)
+echo "Total de archivos encontrados: $(#arvchivos[@]}"
 EOF
