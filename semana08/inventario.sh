@@ -63,7 +63,7 @@ echo "=== ARCHIVOS POR EXTENSION ==="
 	echo "EXTENSION ARCHIVOS TAMANO_KB"
 	for ext in $(printf '%s\n' "${!conteo[@]}" | sort); do
 		kb=$(( ${tamano_ext["$ext"]:-0} / 1024 ))
-		echo "$ext ${conteo[$ext]} $kb"
+		echo "$ext ${conteo[$ext]:-0} $kb"
 	done
 } | column -t
 
@@ -96,7 +96,7 @@ REPORTE="${REPO}/semana08/inventario-report.md"
 	echo "|-----------|----------|-----------|"
 	for ext in $(printf '%s\n' "${!conteo[@]}" | sort); do
 		kb=$(( ${tamano_ext["$ext"]:-0} / 1024 ))
-		echo "| $ext | ${conteo[$ext]} | $kb |"
+		echo "| $ext | ${conteo[$ext]:-0} | $kb |"
 	done
 	echo ""
 	echo "## Resumen por semana"
