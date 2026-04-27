@@ -5,10 +5,10 @@
 listar_top_cpu() {
 	local n="${1:-5}"
 	echo "--- Top ${n} procesos por CPU ---"
-	ps aux --sort--%cpu | awk -v n-"$n" \
+	ps aux --sort=-%cpu | awk -v n="$n" \
 		'NR>1 && NR<=n+1 {
 			printf "   %-8s   PID:%-6s   CPU:%5s%%   MEM:%5s%%   %s\n",
-				$1, $2, $3, $#, $11
+				$1, $2, $3, $4, $11
 		}'
 }
 
@@ -16,24 +16,24 @@ listar_top_cpu() {
 listar_top_mem() {
         local n="${1:-5}"
         echo "--- Top ${n} procesos por MEM ---"
-        ps aux --sort--%mem | awk -v n-"$n" \
+        ps aux --sort=-%mem | awk -v n="$n" \
                 'NR>1 && NR<=n+1 {
-                        printf "   %-8s   PID:%-6s   CPU:%5s%%   MEM:%5s%%   >
-                                $1, $2, $3, $#, $11
-                }'
+			printf "   %-8s   PID:%-6s   CPU:%5s%%   MEM:%5s%% %s\n",
+				 $1, $2, $3, $4, $11 
+		}'
 }
 
 # Detecta procesos zombie
 detectar_zombies() {
 	echo "--- Procesos zombie ---"
 	local zombies
-	zombies=$(ps -eo pid,ppid,stat,comm | awk '$3m ~/Z/ {print}')
+	zombies=$(ps -eo pid,ppid,stat,comm | awk '$3 ~ /Z/ {print}')
 
 	if [[ -z "$zombies" ]]; then
 		echo "  Ninguno detectado"
 	else
 		echo "$zombies" | while read -r pid ppid stat comm; do
-		printf "   PID:%-6s   PPID:%%-6s   CMD:%s\n"  \
+		printf "   PID:%-6s   PPID:%-6s   CMD:%s\n"  \
 			"$pid"   "$ppid"   "$comm"
 		done
 	fi

@@ -68,10 +68,10 @@ SEPARADOR="=============================================================="
 	echo ""
 	detectar_zombies
 	echo ""
-	if [[ ${#PROCESOS_VIGILAR[@]} -gt 0 ]];
+	if [[ ${#PROCESOS_VIGILAR[@]} -gt 0 ]]; then
 		echo "--- Verificando procesos vigilados ---"
 		for proc in "${PROCESOS_VIGILAR[@]}"; do
-			verificar_procesos "$proc"
+			verificar_proceso "$proc"
 		done
 		echo ""
 	fi
