@@ -1,0 +1,13 @@
+==============================================================
+REPORTE DE PROCESOS - 2026-04-26 22:03:47
+Sistema: eric-VirtualBox | Usuario: eric
+==============================================================
+
+--- Top 5 procesos por CPU ---
+   eric       PID:98588    CPU:  4.9%   MEM: 13.8%   /usr/lib/firefox/firefox
+   eric       PID:98846    CPU:  4.4%   MEM: 13.1%   /usr/lib/firefox/firefox-bin
+   eric       PID:1338     CPU:  2.1%   MEM:  6.7%   cinnamon
+   eric       PID:99102    CPU:  1.8%   MEM: 12.1%   /usr/lib/firefox/firefox-bin
+   eric       PID:97351    CPU:  0.7%   MEM: 16.4%   /usr/bin/xreader
+
+--- Top 5 procesos por MEM ---

@@ -1,0 +1,25 @@
+==============================================================
+REPORTE DE PROCESOS - 2026-04-26 22:23:40
+Sistema: eric-VirtualBox | Usuario: eric
+==============================================================
+
+--- Top 5 procesos por CPU ---
+   eric       PID:98588    CPU:  5.1%   MEM: 13.8%   /usr/lib/firefox/firefox
+   eric       PID:98846    CPU:  3.9%   MEM: 12.4%   /usr/lib/firefox/firefox-bin
+   eric       PID:99102    CPU:  2.1%   MEM: 11.6%   /usr/lib/firefox/firefox-bin
+   eric       PID:1338     CPU:  2.1%   MEM:  6.9%   cinnamon
+   eric       PID:97351    CPU:  0.6%   MEM: 16.4%   /usr/bin/xreader
+
+--- Top 5 procesos por MEM ---
+   eric       PID:97351    CPU:  0.6%   MEM: 16.4% /usr/bin/xreader
+   eric       PID:98588    CPU:  5.1%   MEM: 13.8% /usr/lib/firefox/firefox
+   eric       PID:98846    CPU:  3.9%   MEM: 12.4% /usr/lib/firefox/firefox-bin
+   eric       PID:99102    CPU:  2.1%   MEM: 11.6% /usr/lib/firefox/firefox-bin
+   eric       PID:1338     CPU:  2.1%   MEM:  6.9% cinnamon
+
+--- Procesos zombie ---
+  Ninguno detectado
+
+--- Verificando procesos vigilados ---
+[0;32m[2026-04-26 22:23:40] [OK] Procesos 'bash' activo (PID: 97946)[0m
+[0;33m[2026-04-26 22:23:40] [WARNING] Proceso 'sshd' no encontrado[0m
