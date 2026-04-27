@@ -8,7 +8,7 @@ readonly COLOR_ERR="\033[0;31m"
 readonly COLOR_RST="\033[0m"
 
 # Archivos de log
-LOG_FILE="${LOG_FILE: ~/tmp/monitor-procesos.log}"
+LOG_FILE="${LOG_FILE:-/tmp/monitor-procesos.log}"
 
 log() {
 	local nivel="$1"
