@@ -22,7 +22,7 @@ Cada semana incluye un capstone practico versionado con Git.
 |   07   | Bash Scripting - Loops         | completado |
 |   08   | Bash Scripting - Avanzado      | completado |
 |   09   | Gestion de Procesos            | completado |
-|   10   | Systemd y Cron                 |            |
+|   10   | Systemd y Cron                 | completado |
 |   11   | Gestion de Paquetes            |            |
 |   12   | Usuarios y Permisos            |            |
 |   13   | Redes en Linux                 |            |
@@ -149,6 +149,15 @@ Cada semana incluye un capstone practico versionado con Git.
 		monitor-procesos.sh
 		README.md
 	semana10
+		docs/
+			packages.md
+		install.log
+		install-dev-stack.sh
+		README.md
+		rollback.sh
+		verification-report.md
+		verify-install.sh
+
 		(por completar)
 	´´´
 ```
