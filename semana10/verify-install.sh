@@ -24,7 +24,7 @@ verificar_comando() {
 		echo -e "		$ver"
 		OK=$((OK + 1))
 	else
-		echo -e "     ${RED}[FAIL]{NC}  $nombre: no encontrado"
+		echo -e "     ${RED}[FAIL]${NC}  $nombre: no encontrado"
 		FAIL=$((FAIL + 1))
 	fi
 }
@@ -37,8 +37,11 @@ verificar_paquete_deb() {
 	if dpkg -l "$pkg"  &>/dev/null 2>&1; then
 		local ver
 		ver=$(dpkg -l | grep "^ii" | awk '{print $3}')
-		echo -e "    ${GREN}[OK]${NC}	$nombre (v$ver)"
+		echo -e "    ${GREEN}[OK]${NC}	$nombre (v$ver)"
 		OK=$((OK + 1))
+	else
+		echo -e "    ${RED}[FAIL]${NC}  $nombre ($pkg): no instalado"
+		FAIL=$((FAIL + 1))
 	fi
 }
 
@@ -78,7 +81,7 @@ verificar_comando "ss"		ss	"-V"
 echo ""
 echo "========================================="
 PORCENTAJE=$((OK * 100 / TOTAL))
-echo "	RESULTADO: $OK/$TOTAL herramientas ok ($PORCENTAJE%)"
+echo "	RESULTADO: $OK/$TOTAL herramientas OK ($PORCENTAJE%)"
 if [ $FAIL -eq 0 ]; then
 	echo -e "   ${GREEN}Estado: COMPLETADOS${NC}"
 else
