@@ -6,13 +6,13 @@
 set -euo pipefail
 
 # === CONSTANTES ===
-readonly VERSION="1.0.0"
-readonly LOG_FULE="install.log"
+readonly SCRIPT_VERSION="1.0.0"
+readonly LOG_FILE="install.log"
 readonly TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
 
 # === COLORES ===
 RED='\033[0;31M'
-GREN='\033[0;32m'
+GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # Sin color
@@ -46,19 +46,19 @@ log() {
 	local nivel=$1; shift
 	local mensaje="$*"
 	local linea="[$TIMESTAMP] [$nivel] $mensaje"
-	echo "$linea" >> "LOG_FILE"
+	echo "$linea" >> "$LOG_FILE"
 	case $nivel in
 		INFO)	echo -e "${BLUE}[INFO]${NC}    $mensaje" ;;
-		OK)	echo -e "${GREN}[OK]${NC}      $mensaje" ;;
+		OK)	echo -e "${GREEN}[OK]${NC}     $mensaje" ;;
 		WARN)	echo -e "${YELLOW}[WARN]${NC}  $mensaje" ;;
 		ERROR)	echo -e "${RED}[ERROR]${NC}    $mensaje" ;;
 		STEP)	echo -e "\n${BLUE}===== $mensaje =====${NC}" ;;
 	esac
 }
 
-echo "Dev Stack Installer v$VERSION" > "$LOG_FILE"
+echo "Dev Stack Installer v$SCRIPT_VERSION" > "$LOG_FILE"
 echo "Iniciado: $TIMESTAMP" >> "$LOG_FILE"
-echo "---" >> "$LOG_FILE"
+
 
 # === DETECCION DE OS ===
 detectar_os() {
@@ -100,9 +100,9 @@ detectar_os() {
 # === ROLLBACK ===
 rollback() {
 	local exit_code=$?
-	if [ $exit_code -ne 0 ] && [ ${#PAQUETES_INSTALLADOS[@]} -gt 0 ]; then
+	if [ $exit_code -ne 0 ] && [ ${#PAQUETES_INSTALADOS[@]} -gt 0 ]; then
 		log WARN "Error detectado. Iniciando rollback..."
-		sudo apt purge -y "${PAQUETES_INSTALLADOS[@]}" 2/>dev/null || true
+		sudo apt purge -y "${PAQUETES_INSTALADOS[@]}" 2/>dev/null || true
 		sudo apt autoremove -y 2>/dev/null || true
 		log OK "Rollback completado. Paquetes revertidos: ${PAQUETES_INSTALADOS[*]}"
 	fi
@@ -116,7 +116,7 @@ instalar_paquete() {
 
 	if $DRY_RUN; then
 		log INFO "[DRY-RUN] se instalaria: $paquete"
-		return =
+		return 0
 	fi
 
 	if dpkg -l "$paquete" &>/dev/null; then
@@ -165,3 +165,62 @@ instalar_dev_stack() {
 	instalar_paquete "tmux"		"tmux (terminal multiplexer)"
 	instalar_paquete "shellcheck"	"ShellCheck (linter Bash)"
 }
+
+# === CONFIGURACION POST-INSTALACION ===
+configurar_git_global() {
+	log STEP "Verificando configuracion de Git"
+	if git config --global user.name &>/dev/null; then
+		log OK "Git ya configurado: $(git config --global user.name)"
+	else
+		log WARN "Git no tiene nombre de usuario configurado"
+		log INFO "Ejecuta: git config --global user.name 'Tu nombre'"
+		log INFO "Ejecuta: git config --global user.emal 'tu@email.com'"
+	fi
+}
+
+# === RESUMEN FINAL ===
+mostrar_resumen() {
+	local total_nuevo=${#PAQUETES_INSTALADOS[@]}
+	local total_omitido=${#PAQUETES_OMITIDOS[@]}
+
+	echo ""
+	echo "========================================"
+	echo "	RESUMEN DE INSTALACION"
+	echo "========================================"
+	echo "	Nuevos instalados : $total_nuevo"
+	echo "	Ya existian	  : $total_omitido"
+	echo "	Errores		  : $ERRORES"
+	echo "========================================"
+
+	if [ $ERRORES -eq 0 ]; then
+		log OK "Instalacion completada exitosamente"
+		echo ""
+		echo "	Ejecuta: ./verify-install.sh"
+		echo "	Para verificar la instalacion"
+	else
+		log WARN "Instalacion completada con $ERRORES errores"
+		echo "	Revisa $LOG_FILE para detalles"
+	fi
+}
+
+# === MAIN ===
+main() {
+	echo ""
+	echo "======================================="
+	echo "	DEV STACK INSTALLER v$SCRIPT_VERSION"
+	echo "======================================="
+	echo ""
+
+	if [ "$EUID" -ne 0 ]; then
+		log ERROR "Este script requiere privilegios root"
+		log INFO "Ejecuta: sudo $0"
+		exit 1
+	fi
+	detectar_os
+	instalar_dev_stack
+	configurar_git_global
+	mostrar_resumen
+}
+
+main "$@"
+
