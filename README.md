@@ -39,7 +39,15 @@ Cada semana incluye un capstone practico versionado con Git.
 		 filesystem-diagram.txt
 		 filesystem-map.md
 		 README.md
+	 	 capturas/
+			screenshot1.png
+			screenshot2.png
+			screenshot3.png
+			screenshot4.png
 	 semana02	
+		capturas/
+			screenshot1.png
+			screenshot2.png
 		organized/
 			/config
 				config_1.conf
@@ -107,6 +115,9 @@ Cada semana incluye un capstone practico versionado con Git.
 		permisos-aplicados.txt
 		README.md
 	semana03
+		capturas/
+			screenshot1.png
+			screenshot2.png
 		analysis-report.txt
 		commands-used.md
 		generate-sample-log.sh
@@ -115,6 +126,9 @@ Cada semana incluye un capstone practico versionado con Git.
 		report.md
 		sample.log
 	semana04
+		capturas/
+			screenshot1.png
+			screenshot2.png
 		dotfiles/
 			bash_aliases
 			bashrc
@@ -123,24 +137,39 @@ Cada semana incluye un capstone practico versionado con Git.
 		README.md
 		uninstall.sh
 	semana05
+		capturas/
+			screenshot1.png
+			screenshot2.png
 		commands-used.md
 		README.md
 		sysinfo.sh
 	semana06
+		capturas/
+			screenshot1.png
 		logs/
 			backup-check-20260322.log
 		backup-check.sh
 		commands-used.md
 		README.md
 	semana07
+		capturas/
+			screenshot1.png
 		commands-used.md
 		monitor.sh
 		README.md
 	semana08
+		capturas/
+			screenshot1.png
 		commands-used.md
 		inventario.sh
 		README.md
 	semana09
+		capturas/
+			screenshot1.png
+			screenshot2.png
+			screenshot3.png
+			screenshot4.png
+			screenshot5.png
 		lib/
 			alertas.sh
 			procesos.sh
@@ -149,6 +178,11 @@ Cada semana incluye un capstone practico versionado con Git.
 		monitor-procesos.sh
 		README.md
 	semana10
+		capturas/
+			screenshot1.png
+			screenshot2.png
+			screenshot3.png
+			screenshot4.png
 		docs/
 			packages.md
 		install.log
