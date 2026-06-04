@@ -7,20 +7,20 @@ en estructura logica y aplica permisos apropiados segun tipo.
 
 ## Archivos del Proyecto
 
-- ‘generate-messy-files.sh‘ - Genera 50 archivos de prueba
-- ‘organize-files.sh‘ - Organiza archivos por categoria
-- ‘analisis-permisos.md‘ - Justificacion de permisos
-- ‘estado-inicial.txt‘ - Estado antes de organizar
-- ‘estructura-final.txt‘ - Arbol final de directorios
-- ‘permisos-aplicados.txt‘ - Listado completo de permisos
+- `generate-messy-files.sh` - Genera 50 archivos de prueba
+- `organize-files.sh` - Organiza archivos por categoria
+- `analisis-permisos.md` - Justificacion de permisos
+- `estado-inicial.txt` - Estado antes de organizar
+- `estructura-final.txt` - Arbol final de directorios
+- `permisos-aplicados.txt` - Listado completo de permisos
 
 ## Uso
 
 ### 1. Generar archivos de prueba
 
-''' bash
+``` bash
 ./generate-messy-files.sh
-'''
+```
 
 Esto crea 50 archivos mezclados:
 - 15 documentos (.txt, .md, .doc)
@@ -31,11 +31,11 @@ Esto crea 50 archivos mezclados:
 
 ### 2. Organizar archivos
 
-''' bash
+``` bash
 ./organize-files.sh
-'''
+```
 
-Crea estructura 'organized/' con:
+Crea estructura `organized/` con:
 - documents/ - Archivos de texto (644)
 - images/ - Imagenes (644)
 - scripts/ - Scripts ejecutables (755)
@@ -45,7 +45,7 @@ Crea estructura 'organized/' con:
 
 ### 3. Verificar resultado
 
-''' bash
+``` bash
 # Ver estructura
 tree organized/
 
@@ -54,30 +54,30 @@ ls -lR organized/
 
 # Probar script
 ./organized/scripts/script_1.sh
-'''
+```
 
 ## Comandos Aprendidos
 
 ### Manipulacion
-- ‘touch‘ - Crear archivos
-- ‘mkdir -p‘ - Crear directorios con padres
-- ‘cp‘ - Copiar archivos
-- ‘mv‘ - Mover/renombrar
-- ‘rm‘ - Eliminar archivos
+- `touch` - Crear archivos
+- `mkdir -p` - Crear directorios con padres
+- `cp` - Copiar archivos
+- `mv` - Mover/renombrar
+- `rm` - Eliminar archivos
 
 ### Permisos
-- ‘chmod 644‘ - Permisos numericos
-- ‘chmod u +x‘ - Permisos simbolicos
-- ‘find ... -exec chmod‘ - Cambiar permisos recursivos
+- `chmod 644` - Permisos numericos
+- `chmod u +x` - Permisos simbolicos
+- `find ... -exec chmod` - Cambiar permisos recursivos
 
 ### Busqueda
-- ‘find‘ - Buscar por nombre, tipo, tamano
-- ‘ls -l‘ - Ver permisos de archivos
+- `find` - Buscar por nombre, tipo, tamano
+- `ls -l` - Ver permisos de archivos
 
 ### Wildcards
-- ‘*.txt‘ - Todos los .txt
-- ‘archivo [1-5].sh‘ - Rangos
-- ‘{a,b,c}‘ - Expansion
+- `*.txt` - Todos los .txt
+- `archivo [1-5].sh` - Rangos
+- `{a,b,c}` - Expansion
 
 ## Permisos Aplicados
 |    Tipo     | Permisos |      Explicacion      |
@@ -89,7 +89,7 @@ ls -lR organized/
 | Logs        |    644   | Solo owner escribe    |
 | Directorios |    755   | Acceso para todos     |
 
-Ver ‘analisis-permisos.md‘ para detalles.
+Ver `analisis-permisos.md` para detalles.
 
 ## Checklist
 
@@ -102,8 +102,8 @@ Ver ‘analisis-permisos.md‘ para detalles.
 - [x] Analisis de permisos detallado
 
 ## Estructura Final
-'''
-organized /
+```
+organized/
 	documents/	(644)
 		documento_1.txt
 		notas_1.md
@@ -121,9 +121,9 @@ organized /
 		sistema_1.log
 		app_1.log
 	temp/
-'''
+```
 
 ## Notas
-- Los scripts usan ‘2>/dev/null || true‘ para ignorar errores si algunos archivos no existen
+- Los scripts usan `2>/dev/null || true` para ignorar errores si algunos archivos no existen
 - El organizador es idempotente: puede ejecutarse multiples veces
 - Se preserva el estado inicial para comparacion

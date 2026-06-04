@@ -3,57 +3,57 @@
 # ============ NAVEGACION ============
 
 # Listado mejorado
-alias ll='ls -lhF --color=auto'
-alias la='ls -lhaF --color=auto'
+alias ll=`ls -lhF --color=auto`
+alias la=`ls -lhaF --color=auto`
 alias l='ls -CF --color=auto'
 
 # Navegacion rapida
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias ~='cd ~'
+alias ..=`cd ..`
+alias ...=`cd ../..`
+alias ....=`cd ../../..`
+alias ~=`cd ~`
 
 # Ir a directorios frecuentes
-alias lab='cd ~/Linux-lab'
+alias lab=`cd ~/Linux-lab`
 
 # ============ SEGURIDAD ============
 
 # Pedir confirmacion antes de borrar, copiar o mover
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
+alias rm=`rm -i`
+alias cp=`cp -i`
+alias mv=`mv -i`
 
 # ============ SISTEMA ============
 # Limpiar pantalla
-alias c='clear'
-alias cls='clear'
+alias c=`clear`
+alias cls=`clear`
 
 # Ver uso de disco de forma legible
-alias df='df -hT'
-alias du='du -ah'
+alias df=`df -hT`
+alias du=`du -ah`
 
 # Ver memoria en uso
-alias mem='free -h'
+alias mem=`free -h`
 
 # Ver procesos activos de forma amigable
-alias procesos='ps aux | sort -k3 -rn | head -20'
+alias procesos=`ps aux | sort -k3 -rn | head -20`
 
 # ============ RED ============
 # Ver mi IP local
 alias miip='hostname -I | awk '\''{print $1}'\'
 
 # Hacer ping a 5 paquetes solamente
-alias ping='ping -c 5'
+alias ping=`ping -c 5`
 
 # ============ GIT ============
 
-alias gs='git status'
-alias ga='git add'
-alias gc='git commit'
-alias gp='git push'
-alias gl='git log --oneline --graph --all'
-alias gd='git diff'
-alias gb='git branch'
+alias gs=`git status`
+alias ga=`git add`
+alias gc=`git commit`
+alias gp=`git push`
+alias gl=`git log --oneline --graph --all`
+alias gd=`git diff`
+alias gb=`git branch`
 
 # ============ FUNCIONES ============
 
@@ -71,11 +71,11 @@ extraer () {
 	fi
 	case "$1" in
 		*.tar.gz|*.tgz) tar xzf "$1" ;;
-		*.tar.bz2) 	tar xjf "$1" ;;
+		*.tar.bz2)	tar xjf "$1" ;;
 		*.tar.xz)	tar xJf "$1" ;;
-		*.zip) 		unzip "$1"   ;;
+		*.zip)		unzip "$1"   ;;
 		*.gz)		gunzip "$1"  ;;
-		*.bz2) 		bunzip2 "$1" ;;
+		*.bz2)		bunzip2 "$1" ;;
 		*.tar)		tar xf "$1"  ;;
 		*)
 			echo "Formato no reconocido: $1"

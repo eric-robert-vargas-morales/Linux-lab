@@ -15,7 +15,7 @@
 
 ### Por que 755 para scripts ?
 
-Los scripts necesitan el permiso de ejecucion (x) para poder ejecutarse directamente con './script.sh'.
+Los scripts necesitan el permiso de ejecucion (x) para poder ejecutarse directamente con `./script.sh`
 
 - Owner: rwx (7) - puede leer, modificar y ejecutar
 - Group: r-x (5) - puede leer y ejecutar, no modificar
@@ -25,7 +25,8 @@ Esto permite compartir scripts sin dar permisos de edicion.
 
 ### Por que 644 para documentos ?
 
-Los documentos de texto no necesitan ejecutarse. El permiso 644 asegura que:
+Los documentos de texto no necesitan ejecutarse. 
+El permiso 644 asegura que:
 
 - Owner: rw- (6) - puede leer y modificar
 - Group: r-- (4) - solo puede leer
@@ -37,15 +38,15 @@ Esto previene modificaciones accidentales por otros usuarios.
 
 Los directorios NECESITAN el bit de ejecucion (x) para:
 
-1. Permitir 'cd' al directorio
-2. Listar contenido con 'ls'
+1. Permitir `cd` al directorio
+2. Listar contenido con `ls`
 3. Acceder a archivos dentro
 
 Sin el permiso x, el directorio es inaccesible aunque tenga permiso r (lectura).
 
 ### Por que 644 para configuraciones?
 
-Los archivos de configuracion son sensibles. Solo el dueno debe poder modificarlos para evitar cambios no autorizados que podrian romper aplicaciones.
+Los archivos de configuracion son sensibles. Solo el dueño debe poder modificarlos para evitar cambios no autorizados que podrian romper aplicaciones.
 
 ### Por que 644 para logs?
 
@@ -53,7 +54,7 @@ Los archivos de log generalmente son escritos por el sistema o la aplicacion (co
 
 ## Comandos Utilizados
 
-'''bash
+```bash
 # Cambiar permisos de directorios
 chmod 755 organized/*/
 
@@ -62,12 +63,12 @@ find organized/documents/ -type f -exec chmod 644 {} \;
 
 # Verificar permisos aplicados
 ls -l organized/documents/
-'''
+```
 
 ## Verificacion
 
 Puedes verificar que los permisos estan correctos con:
-'''bash
+```bash
 #Ver permisos de directorios
 ls -ld organized/*/
 
@@ -76,7 +77,7 @@ ls -l organized/scripts/
 
 # Intentar ejecutar un script
 ./organized/scripts/script_1.sh
-'''
+```
 
 ## Seguridad
 Los permisos aplicados siguen el principio de minimo privilegio:

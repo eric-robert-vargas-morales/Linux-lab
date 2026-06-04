@@ -1,18 +1,18 @@
 Dev Stack Installer v1.0.0
-Iniciado: 2026-05-03 23:44:38
-[2026-05-03 23:44:38] [STEP] Detectando sistema operativo
-[2026-05-03 23:44:38] [OK] OS soportado: Linux Mint 22.1
-[2026-05-03 23:44:38] [INFO] OS: linuxmint | Version: 22.1
-[2026-05-03 23:44:38] [STEP] Actualizando lista de paquetes
+Iniciado: 2026-06-04 00:56:53
+[2026-06-04 00:56:53] [STEP] Detectando sistema operativo
+[2026-06-04 00:56:53] [OK] OS soportado: Linux Mint 22.1
+[2026-06-04 00:56:53] [INFO] OS: linuxmint | Version: 22.1
+[2026-06-04 00:56:53] [STEP] Actualizando lista de paquetes
 
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
-Se pueden actualizar 213 paquetes. Ejecute «apt list --upgradable» para verlos.
-[2026-05-03 23:44:38] [OK] Lista de paquetes actualizado
-[2026-05-03 23:44:38] [STEP] Instalando herramientas esenciales
-[2026-05-03 23:44:38] [OK] Git (control de versiones) ya instalada (v1:2.43.0-1ubuntu7.3) -- omitidos
-[2026-05-03 23:44:38] [OK] curl (transferencia HTTP) ya instalada (v8.5.0-2ubuntu10.6) -- omitidos
-[2026-05-03 23:44:38] [OK] wget (descarga de archivos) ya instalada (v1.21.4-1ubuntu4.1) -- omitidos
-[2026-05-03 23:44:38] [OK] Vim (visualizar directorios) ya instalada (v2:9.1.0016-1ubuntu7.9) -- omitidos
-[2026-05-03 23:44:38] [OK] tree (visualizar directorio) ya instalada (v2.1.1-2ubuntu3.24.04.2) -- omitidos
-[2026-05-03 23:44:38] [OK] htop (monitor de procesos) ya instalada (v3.3.0-4build1) -- omitidos
+Se pueden actualizar 294 paquetes. Ejecute «apt list --upgradable» para verlos.
+[2026-06-04 00:56:53] [OK] Lista de paquetes actualizado
+[2026-06-04 00:56:53] [STEP] Instalando herramientas esenciales
+[2026-06-04 00:56:53] [OK] Git (control de versiones) ya instalada (v1:2.43.0-1ubuntu7.3) -- omitidos
+[2026-06-04 00:56:53] [OK] curl (transferencia HTTP) ya instalada (v8.5.0-2ubuntu10.6) -- omitidos
+[2026-06-04 00:56:53] [OK] wget (descarga de archivos) ya instalada (v1.21.4-1ubuntu4.1) -- omitidos
+[2026-06-04 00:56:53] [OK] Vim (visualizar directorios) ya instalada (v2:9.1.0016-1ubuntu7.9) -- omitidos
+[2026-06-04 00:56:53] [OK] tree (visualizar directorio) ya instalada (v2.1.1-2ubuntu3.24.04.2) -- omitidos
+[2026-06-04 00:56:53] [OK] htop (monitor de procesos) ya instalada (v3.3.0-4build1) -- omitidos

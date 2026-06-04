@@ -1,0 +1,461 @@
+==============================================================
+REPORTE DE PROCESOS - 2026-06-04 00:42:44
+Sistema: eric-VirtualBox | Usuario: root
+==============================================================
+
+--- Top 5 procesos por CPU ---
+   eric       PID:7035     CPU: 26.8%   MEM: 19.6%   /usr/lib/firefox/firefox-bin
+   eric       PID:1342     CPU: 26.8%   MEM:  6.1%   cinnamon
+   eric       PID:1761     CPU:  1.2%   MEM: 12.5%   /usr/lib/firefox/firefox
+   eric       PID:16861    CPU:  0.8%   MEM:  9.6%   /usr/bin/xreader
+   eric       PID:19083    CPU:  0.7%   MEM:  6.5%   /usr/bin/xreader
+
+--- Top 5 procesos por MEM ---
+   eric       PID:7035     CPU: 26.8%   MEM: 19.6% /usr/lib/firefox/firefox-bin
+   eric       PID:1761     CPU:  1.2%   MEM: 12.5% /usr/lib/firefox/firefox
+   eric       PID:16861    CPU:  0.8%   MEM:  9.6% /usr/bin/xreader
+   eric       PID:16026    CPU:  0.2%   MEM:  8.5% /usr/bin/xreader
+   eric       PID:1968     CPU:  0.2%   MEM:  7.1% /usr/lib/firefox/firefox-bin
+
+--- Procesos zombie ---
+   PID:5271     PPID:5258     CMD:sd_espeak-ng-mb
+
+--- arbol de procesos de 'root' ---
+systemd(1)-+-ModemManager(721)-+-{ModemManager}(735)
+           |                   |-{ModemManager}(737)
+           |                   `-{ModemManager}(740)
+           |-NetworkManager(680)-+-{NetworkManager}(691)
+           |                     |-{NetworkManager}(697)
+           |                     `-{NetworkManager}(703)
+           |-accounts-daemon(592)-+-{accounts-daemon}(600)
+           |                      |-{accounts-daemon}(601)
+           |                      `-{accounts-daemon}(625)
+           |-agetty(836)
+           |-at-spi2-registr(1253)-+-{at-spi2-registr}(1266)
+           |                       |-{at-spi2-registr}(1267)
+           |                       `-{at-spi2-registr}(1270)
+           |-avahi-daemon(593)---avahi-daemon(664)
+           |-colord(1278)-+-{colord}(1286)
+           |              |-{colord}(1287)
+           |              `-{colord}(1289)
+           |-crashhelper(1768)---{crashhelper}(1769)
+           |-cron(595)
+           |-csd-printer(1233)-+-{csd-printer}(1254)
+           |                   |-{csd-printer}(1255)
+           |                   `-{csd-printer}(1256)
+           |-cups-browsed(1037)-+-{cups-browsed}(1098)
+           |                    |-{cups-browsed}(1099)
+           |                    `-{cups-browsed}(1100)
+           |-cupsd(805)
+           |-dbus-daemon(596)
+           |-fwupd(2937)-+-{fwupd}(2940)
+           |             |-{fwupd}(2947)
+           |             |-{fwupd}(2948)
+           |             |-{fwupd}(2949)
+           |             `-{fwupd}(2951)
+           |-fwupdmgr(2897)-+-{fwupdmgr}(2932)
+           |                |-{fwupdmgr}(2933)
+           |                |-{fwupdmgr}(2934)
+           |                |-{fwupdmgr}(2935)
+           |                `-{fwupdmgr}(2936)
+           |-irqbalance(604)---{irqbalance}(622)
+           |-kerneloops(1045)
+           |-kerneloops(1051)
+           |-lightdm(818)-+-Xorg(832)---{Xorg}(867)
+           |              |-lightdm(869)-+-cinnamon-sessio(895)-+-agent(1402)-+-{agent}(1411)
+           |              |              |                      |             |-{agent}(1412)
+           |              |              |                      |             `-{agent}(1415)
+           |              |              |                      |-applet.py(1737)
+           |              |              |                      |-at-spi-bus-laun(1154)-+-dbus-daemon(1169)
+           |              |              |                      |                       |-{at-spi-bus-laun}(1162)
+           |              |              |                      |                       |-{at-spi-bus-laun}(1163)
+           |              |              |                      |                       |-{at-spi-bus-laun}(1164)
+           |              |              |                      |                       `-{at-spi-bus-laun}(1167)
+           |              |              |                      |-blueman-applet(1386)-+-{blueman-applet}(1431)
+           |              |              |                      |                      |-{blueman-applet}(1432)
+           |              |              |                      |                      |-{blueman-applet}(1433)
+           |              |              |                      |                      `-{blueman-applet}(1460)
+           |              |              |                      |-cinnamon-killer(1401)-+-{cinnamon-killer}(1452)
+           |              |              |                      |                       |-{cinnamon-killer}(1453)
+           |              |              |                      |                       |-{cinnamon-killer}(1454)
+           |              |              |                      |                       `-{cinnamon-killer}(1455)
+           |              |              |                      |-cinnamon-launch(1328)-+-cinnamon(1342)-+-firefox-bin(1761)-+-fork+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   |-{fir+
+           |              |              |                      |                       |                |                   `-{fir+
+           |              |              |                      |                       |                |-nemo(7722)-+-xreader(112+
+           |              |              |                      |                       |                |            |-xreader(153+
+           |              |              |                      |                       |                |            |-xreader(160+
+           |              |              |                      |                       |                |            |-xreader(168+
+           |              |              |                      |                       |                |            |-xreader(190+
+           |              |              |                      |                       |                |            |-{nemo}(7725+
+           |              |              |                      |                       |                |            |-{nemo}(7726+
+           |              |              |                      |                       |                |            |-{nemo}(7727+
+           |              |              |                      |                       |                |            |-{nemo}(7729+
+           |              |              |                      |                       |                |            |-{nemo}(7732+
+           |              |              |                      |                       |                |            `-{nemo}(9555+
+           |              |              |                      |                       |                |-{cinnamon}(1347)
+           |              |              |                      |                       |                |-{cinnamon}(1348)
+           |              |              |                      |                       |                |-{cinnamon}(1350)
+           |              |              |                      |                       |                |-{cinnamon}(1351)
+           |              |              |                      |                       |                |-{cinnamon}(1355)
+           |              |              |                      |                       |                |-{cinnamon}(1356)
+           |              |              |                      |                       |                |-{cinnamon}(1357)
+           |              |              |                      |                       |                |-{cinnamon}(1358)
+           |              |              |                      |                       |                |-{cinnamon}(1359)
+           |              |              |                      |                       |                |-{cinnamon}(1360)
+           |              |              |                      |                       |                |-{cinnamon}(1361)
+           |              |              |                      |                       |                |-{cinnamon}(1362)
+           |              |              |                      |                       |                |-{cinnamon}(1523)
+           |              |              |                      |                       |                `-{cinnamon}(1655)
+           |              |              |                      |                       |-{cinnamon-launch}(1339)
+           |              |              |                      |                       |-{cinnamon-launch}(1340)
+           |              |              |                      |                       |-{cinnamon-launch}(1341)
+           |              |              |                      |                       |-{cinnamon-launch}(1343)
+           |              |              |                      |                       |-{cinnamon-launch}(1344)
+           |              |              |                      |                       `-{cinnamon-launch}(1345)
+           |              |              |                      |-csd-a11y-settin(1172)-+-{csd-a11y-settin}(1182)
+           |              |              |                      |                       |-{csd-a11y-settin}(1183)
+           |              |              |                      |                       |-{csd-a11y-settin}(1185)
+           |              |              |                      |                       `-{csd-a11y-settin}(1194)
+           |              |              |                      |-csd-automount(1160)-+-{csd-automount}(1264)
+           |              |              |                      |                     |-{csd-automount}(1265)
+           |              |              |                      |                     |-{csd-automount}(1268)
+           |              |              |                      |                     `-{csd-automount}(1272)
+           |              |              |                      |-csd-background(1180)-+-{csd-background}(1197)
+           |              |              |                      |                      |-{csd-background}(1198)
+           |              |              |                      |                      |-{csd-background}(1199)
+           |              |              |                      |                      `-{csd-background}(1245)
+           |              |              |                      |-csd-clipboard(1151)-+-{csd-clipboard}(1232)
+           |              |              |                      |                     |-{csd-clipboard}(1239)
+           |              |              |                      |                     `-{csd-clipboard}(1240)
+           |              |              |                      |-csd-color(1155)-+-{csd-color}(1241)
+           |              |              |                      |                 |-{csd-color}(1246)
+           |              |              |                      |                 |-{csd-color}(1248)
+           |              |              |                      |                 `-{csd-color}(1257)
+           |              |              |                      |-csd-housekeepin(1171)-+-{csd-housekeepin}(1214)
+           |              |              |                      |                       |-{csd-housekeepin}(1215)
+           |              |              |                      |                       |-{csd-housekeepin}(1222)
+           |              |              |                      |                       `-{csd-housekeepin}(1252)
+           |              |              |                      |-csd-keyboard(1150)-+-{csd-keyboard}(1208)
+           |              |              |                      |                    |-{csd-keyboard}(1209)
+           |              |              |                      |                    |-{csd-keyboard}(1210)
+           |              |              |                      |                    `-{csd-keyboard}(1247)
+           |              |              |                      |-csd-media-keys(1165)-+-{csd-media-keys}(1211)
+           |              |              |                      |                      |-{csd-media-keys}(1212)
+           |              |              |                      |                      |-{csd-media-keys}(1219)
+           |              |              |                      |                      `-{csd-media-keys}(1291)
+           |              |              |                      |-csd-power(1152)-+-{csd-power}(1226)
+           |              |              |                      |                 |-{csd-power}(1227)
+           |              |              |                      |                 |-{csd-power}(1228)
+           |              |              |                      |                 `-{csd-power}(1250)
+           |              |              |                      |-csd-print-notif(1181)-+-{csd-print-notif}(1187)
+           |              |              |                      |                       |-{csd-print-notif}(1195)
+           |              |              |                      |                       `-{csd-print-notif}(1196)
+           |              |              |                      |-csd-screensaver(1153)-+-{csd-screensaver}(1157)
+           |              |              |                      |                       |-{csd-screensaver}(1158)
+           |              |              |                      |                       `-{csd-screensaver}(1161)
+           |              |              |                      |-csd-settings-re(1168)-+-{csd-settings-re}(1175)
+           |              |              |                      |                       |-{csd-settings-re}(1176)
+           |              |              |                      |                       |-{csd-settings-re}(1179)
+           |              |              |                      |                       `-{csd-settings-re}(1184)
+           |              |              |                      |-csd-wacom(1174)-+-{csd-wacom}(1204)
+           |              |              |                      |                 |-{csd-wacom}(1205)
+           |              |              |                      |                 `-{csd-wacom}(1206)
+           |              |              |                      |-csd-xsettings(1170)-+-{csd-xsettings}(1201)
+           |              |              |                      |                     |-{csd-xsettings}(1202)
+           |              |              |                      |                     |-{csd-xsettings}(1203)
+           |              |              |                      |                     `-{csd-xsettings}(1243)
+           |              |              |                      |-evolution-alarm(1396)-+-{evolution-alarm}(1471)
+           |              |              |                      |                       |-{evolution-alarm}(1472)
+           |              |              |                      |                       |-{evolution-alarm}(1473)
+           |              |              |                      |                       |-{evolution-alarm}(1474)
+           |              |              |                      |                       |-{evolution-alarm}(1475)
+           |              |              |                      |                       |-{evolution-alarm}(1492)
+           |              |              |                      |                       `-{evolution-alarm}(1494)
+           |              |              |                      |-nemo-desktop(1393)-+-{nemo-desktop}(1428)
+           |              |              |                      |                    |-{nemo-desktop}(1429)
+           |              |              |                      |                    |-{nemo-desktop}(1430)
+           |              |              |                      |                    |-{nemo-desktop}(1447)
+           |              |              |                      |                    `-{nemo-desktop}(1591)
+           |              |              |                      |-xapp-sn-watcher(1364)-+-{xapp-sn-watcher}(1382)
+           |              |              |                      |                       |-{xapp-sn-watcher}(1383)
+           |              |              |                      |                       |-{xapp-sn-watcher}(1384)
+           |              |              |                      |                       `-{xapp-sn-watcher}(1385)
+           |              |              |                      |-{cinnamon-sessio}(1131)
+           |              |              |                      |-{cinnamon-sessio}(1132)
+           |              |              |                      |-{cinnamon-sessio}(1133)
+           |              |              |                      `-{cinnamon-sessio}(1134)
+           |              |              |-{lightdm}(870)
+           |              |              |-{lightdm}(871)
+           |              |              `-{lightdm}(872)
+           |              |-{lightdm}(821)
+           |              |-{lightdm}(822)
+           |              `-{lightdm}(825)
+           |-mintUpdate(1676)-+-{mintUpdate}(1678)
+           |                  |-{mintUpdate}(1679)
+           |                  |-{mintUpdate}(1680)
+           |                  |-{mintUpdate}(1681)
+           |                  |-{mintUpdate}(1683)
+           |                  |-{mintUpdate}(1686)
+           |                  |-{mintUpdate}(1708)
+           |                  `-{mintUpdate}(1709)
+           |-mintreport-tray(1742)-+-{mintreport-tray}(1743)
+           |                       |-{mintreport-tray}(1744)
+           |                       |-{mintreport-tray}(1745)
+           |                       `-{mintreport-tray}(1748)
+           |-polkitd(617)-+-{polkitd}(683)
+           |              |-{polkitd}(684)
+           |              `-{polkitd}(686)
+           |-power-profiles-(619)-+-{power-profiles-}(626)
+           |                      |-{power-profiles-}(627)
+           |                      `-{power-profiles-}(629)
+           |-rsyslogd(667)-+-{rsyslogd}(714)
+           |               |-{rsyslogd}(715)
+           |               `-{rsyslogd}(716)
+           |-rtkit-daemon(915)-+-{rtkit-daemon}(928)
+           |                   `-{rtkit-daemon}(929)
+           |-switcheroo-cont(624)-+-{switcheroo-cont}(641)
+           |                      |-{switcheroo-cont}(642)
+           |                      `-{switcheroo-cont}(645)
+           |-systemd(877)-+-(sd-pam)(879)
+           |              |-dbus-daemon(901)
+           |              |-dconf-service(1186)-+-{dconf-service}(1189)
+           |              |                     |-{dconf-service}(1190)
+           |              |                     `-{dconf-service}(1191)
+           |              |-evolution-addre(1530)-+-{evolution-addre}(1534)
+           |              |                       |-{evolution-addre}(1535)
+           |              |                       |-{evolution-addre}(1536)
+           |              |                       |-{evolution-addre}(1538)
+           |              |                       |-{evolution-addre}(1539)
+           |              |                       `-{evolution-addre}(1548)
+           |              |-evolution-calen(1495)-+-{evolution-calen}(1511)
+           |              |                       |-{evolution-calen}(1514)
+           |              |                       |-{evolution-calen}(1515)
+           |              |                       |-{evolution-calen}(1521)
+           |              |                       |-{evolution-calen}(1522)
+           |              |                       |-{evolution-calen}(1528)
+           |              |                       |-{evolution-calen}(1529)
+           |              |                       |-{evolution-calen}(1533)
+           |              |                       `-{evolution-calen}(1541)
+           |              |-evolution-sourc(1476)-+-{evolution-sourc}(1478)
+           |              |                       |-{evolution-sourc}(1479)
+           |              |                       |-{evolution-sourc}(1480)
+           |              |                       `-{evolution-sourc}(1481)
+           |              |-gnome-keyring-d(1145)-+-{gnome-keyring-d}(1146)
+           |              |                       |-{gnome-keyring-d}(1147)
+           |              |                       |-{gnome-keyring-d}(1148)
+           |              |                       `-{gnome-keyring-d}(1149)
+           |              |-gnome-terminal-(1609)-+-bash(1653)---monitor-proceso(19403)-+-monitor-proceso(19407)---pstree(19420)
+           |              |                       |                                     `-tee(19409)
+           |              |                       |-bash(3638)
+           |              |                       |-{gnome-terminal-}(1610)
+           |              |                       |-{gnome-terminal-}(1611)
+           |              |                       |-{gnome-terminal-}(1612)
+           |              |                       |-{gnome-terminal-}(1613)
+           |              |                       `-{gnome-terminal-}(1651)
+           |              |-goa-daemon(1299)-+-{goa-daemon}(1300)
+           |              |                  |-{goa-daemon}(1301)
+           |              |                  |-{goa-daemon}(1303)
+           |              |                  `-{goa-daemon}(1304)
+           |              |-goa-identity-se(1307)-+-{goa-identity-se}(1308)
+           |              |                       |-{goa-identity-se}(1309)
+           |              |                       `-{goa-identity-se}(1311)
+           |              |-gvfs-afc-volume(1314)-+-{gvfs-afc-volume}(1321)
+           |              |                       |-{gvfs-afc-volume}(1322)
+           |              |                       |-{gvfs-afc-volume}(1323)
+           |              |                       `-{gvfs-afc-volume}(1325)
+           |              |-gvfs-goa-volume(1294)-+-{gvfs-goa-volume}(1295)
+           |              |                       |-{gvfs-goa-volume}(1296)
+           |              |                       `-{gvfs-goa-volume}(1297)
+           |              |-gvfs-gphoto2-vo(1327)-+-{gvfs-gphoto2-vo}(1330)
+           |              |                       |-{gvfs-gphoto2-vo}(1331)
+           |              |                       `-{gvfs-gphoto2-vo}(1333)
+           |              |-gvfs-mtp-volume(1334)-+-{gvfs-mtp-volume}(1335)
+           |              |                       |-{gvfs-mtp-volume}(1336)
+           |              |                       `-{gvfs-mtp-volume}(1338)
+           |              |-gvfs-udisks2-vo(1275)-+-{gvfs-udisks2-vo}(1279)
+           |              |                       |-{gvfs-udisks2-vo}(1280)
+           |              |                       |-{gvfs-udisks2-vo}(1281)
+           |              |                       `-{gvfs-udisks2-vo}(1292)
+           |              |-gvfsd(1200)-+-gvfsd-dnssd(2209)-+-{gvfsd-dnssd}(2210)
+           |              |             |                   |-{gvfsd-dnssd}(2211)
+           |              |             |                   `-{gvfsd-dnssd}(2212)
+           |              |             |-gvfsd-network(2202)-+-{gvfsd-network}(2203)
+           |              |             |                     |-{gvfsd-network}(2204)
+           |              |             |                     |-{gvfsd-network}(2205)
+           |              |             |                     `-{gvfsd-network}(2208)
+           |              |             |-gvfsd-trash(1583)-+-{gvfsd-trash}(1584)
+           |              |             |                   |-{gvfsd-trash}(1585)
+           |              |             |                   |-{gvfsd-trash}(1586)
+           |              |             |                   `-{gvfsd-trash}(1589)
+           |              |             |-{gvfsd}(1216)
+           |              |             |-{gvfsd}(1217)
+           |              |             `-{gvfsd}(1218)
+           |              |-gvfsd-fuse(1225)-+-{gvfsd-fuse}(1234)
+           |              |                  |-{gvfsd-fuse}(1235)
+           |              |                  |-{gvfsd-fuse}(1236)
+           |              |                  |-{gvfsd-fuse}(1237)
+           |              |                  |-{gvfsd-fuse}(1238)
+           |              |                  |-{gvfsd-fuse}(1244)
+           |              |                  `-{gvfsd-fuse}(4362)
+           |              |-gvfsd-metadata(1598)-+-{gvfsd-metadata}(1599)
+           |              |                      |-{gvfsd-metadata}(1600)
+           |              |                      `-{gvfsd-metadata}(1601)
+           |              |-obexd(1483)
+           |              |-pipewire(891)-+-{pipewire}(912)
+           |              |               `-{pipewire}(918)
+           |              |-pipewire(892)-+-{pipewire}(911)
+           |              |               `-{pipewire}(914)
+           |              |-pipewire-pulse(894)-+-{pipewire-pulse}(913)
+           |              |                     `-{pipewire-pulse}(919)
+           |              |-speech-dispatch(5258)-+-sd_dummy(5277)-+-{sd_dummy}(5278)
+           |              |                       |                `-{sd_dummy}(5279)
+           |              |                       |-sd_espeak-ng(5274)---{sd_espeak-ng}(5275)
+           |              |                       |-sd_espeak-ng-mb(5271)
+           |              |                       |-sd_openjtalk(5280)
+           |              |                       |-{speech-dispatch}(5281)
+           |              |                       |-{speech-dispatch}(5282)
+           |              |                       |-{speech-dispatch}(5283)
+           |              |                       `-{speech-dispatch}(5284)
+           |              |-wireplumber(893)-+-{wireplumber}(910)
+           |              |                  |-{wireplumber}(916)
+           |              |                  |-{wireplumber}(917)
+           |              |                  |-{wireplumber}(927)
+           |              |                  `-{wireplumber}(932)
+           |              |-xdg-desktop-por(1614)-+-{xdg-desktop-por}(1615)
+           |              |                       |-{xdg-desktop-por}(1616)
+           |              |                       |-{xdg-desktop-por}(1617)
+           |              |                       |-{xdg-desktop-por}(1641)
+           |              |                       |-{xdg-desktop-por}(1648)
+           |              |                       `-{xdg-desktop-por}(1649)
+           |              |-xdg-desktop-por(1634)-+-{xdg-desktop-por}(1635)
+           |              |                       |-{xdg-desktop-por}(1636)
+           |              |                       |-{xdg-desktop-por}(1637)
+           |              |                       `-{xdg-desktop-por}(1639)
+           |              |-xdg-desktop-por(1642)-+-{xdg-desktop-por}(1643)
+           |              |                       |-{xdg-desktop-por}(1644)
+           |              |                       |-{xdg-desktop-por}(1645)
+           |              |                       `-{xdg-desktop-por}(1647)
+           |              |-xdg-document-po(1624)-+-fusermount3(1630)
+           |              |                       |-{xdg-document-po}(1625)
+           |              |                       |-{xdg-document-po}(1626)
+           |              |                       |-{xdg-document-po}(1627)
+           |              |                       |-{xdg-document-po}(1629)
+           |              |                       |-{xdg-document-po}(1631)
+           |              |                       `-{xdg-document-po}(1632)
+           |              |-xdg-permission-(1619)-+-{xdg-permission-}(1620)
+           |              |                       |-{xdg-permission-}(1621)
+           |              |                       `-{xdg-permission-}(1623)
+           |              `-xreaderd(2279)-+-{xreaderd}(2280)
+           |                               |-{xreaderd}(2281)
+           |                               `-{xreaderd}(2282)
+           |-systemd-journal(18893)
+           |-systemd-logind(18947)
+           |-systemd-resolve(18949)
+           |-systemd-timesyn(18915)---{systemd-timesyn}(18925)
+           |-systemd-udevd(18923)
+           |-touchegg(631)-+-{touchegg}(670)
+           |               |-{touchegg}(671)
+           |               `-{touchegg}(672)
+           |-udisksd(640)-+-{udisksd}(662)
+           |              |-{udisksd}(663)
+           |              |-{udisksd}(666)
+           |              |-{udisksd}(717)
+           |              `-{udisksd}(723)
+           |-upowerd(1276)-+-{upowerd}(1282)
+           |               |-{upowerd}(1283)
+           |               `-{upowerd}(1285)
+           `-wpa_supplicant(685)
+
+--- Procesos con CPU > 10% ---
+  PID:19422    CPU: 50.0%   CMD:ps
+  PID:7035     CPU: 26.8%   CMD:/usr/lib/firefox/firefox-bin
+  PID:1342     CPU: 26.8%   CMD:cinnamon
+
+==============================================================
+Reporte guardado en: reportes/reporte-20260604-004244.txt
